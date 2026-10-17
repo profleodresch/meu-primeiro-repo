@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora de IMC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>📊 Calculadora de IMC</h1>
+    <p class="subtitle">Índice de Massa Corporal — tabela OMS</p>
+
+    <label for="peso">Peso (kg)</label>
+    <input id="peso" type="number" step="0.1" min="0" placeholder="Ex: 70.5" />
+
+    <label for="altura">Altura (m)</label>
+    <input id="altura" type="number" step="0.01" min="0" placeholder="Ex: 1.75" />
+
+    <button id="btn-calcular">Calcular IMC</button>
+    <button id="btn-limpar" class="secundario">Limpar</button>
+
+    <div id="resultado" class="resultado escondido">
+      <p>Seu IMC: <strong id="valor-imc">--</strong></p>
+      <p>Classificação: <strong id="class-imc">--</strong></p>
+    </div>
+
+    <details>
+      <summary>Tabela OMS</summary>
+      <ul>
+        <li>&lt; 18.5 → Abaixo do peso</li>
+        <li>18.5 – 24.9 → Peso normal</li>
+        <li>25 – 29.9 → Sobrepeso</li>
+        <li>30 – 34.9 → Obesidade grau 1</li>
+        <li>35 – 39.9 → Obesidade grau 2</li>
+        <li>≥ 40 → Obesidade grau 3</li>
+      </ul>
+    </details>
+
+    <p class="versao-python">Prefere terminal? Use também: <code>python imc.py</code></p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
